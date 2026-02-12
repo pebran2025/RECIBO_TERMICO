@@ -30,7 +30,6 @@ function getUrlParameters() {
         detalleVenta: urlParams.get('detalleVenta') || '',
         noVenta: urlParams.get('noVenta') || '',
         tipoVenta: urlParams.get('tipoVenta') || '',
-        transporte: urlParams.get('transporte') || '',
         fecha: formatDate(urlParams.get('fecha')) || '',
         nombreEmpresa: urlParams.get('nombreEmpresa') || '',
         nombreCliente: urlParams.get('nombreCliente') || '',
@@ -38,8 +37,6 @@ function getUrlParameters() {
         noNit: urlParams.get('noNit') || '',
         codigoCliente: urlParams.get('codigoCliente') || '',
         telefono: urlParams.get('telefono') || '',
-        ruta: urlParams.get('ruta') || '',
-        area: urlParams.get('area') || '',
         totalVenta: urlParams.get('totalVenta') || '',
         nombreAsesor: urlParams.get('nombreAsesor') || '',
         telefonoAsesor: urlParams.get('telefonoAsesor') || ''
@@ -65,13 +62,10 @@ function setValues() {
     // Asignar valores a los elementos
     document.getElementById("noVenta").textContent = params.noVenta;
     document.getElementById("tipoVenta").textContent = params.tipoVenta;
-    document.getElementById("transporte").textContent = params.transporte;
     document.getElementById("fecha").textContent = params.fecha;
     document.getElementById("nombreEmpresa").textContent = params.nombreEmpresa;
     document.getElementById("nombreCliente").textContent = params.nombreCliente;
     document.getElementById("direccion").textContent = params.direccion;
-    document.getElementById("ruta").textContent = params.ruta;
-    document.getElementById("area").textContent = params.area;
     document.getElementById("noNit").textContent = params.noNit;
     document.getElementById("codigoCliente").textContent = params.codigoCliente;
     document.getElementById("telefono").textContent = params.telefono;
