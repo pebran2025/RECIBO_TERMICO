@@ -1,153 +1,150 @@
-/* ========================================= */
-/* FORMATO IMPRESORA POS 58MM ROLLO REAL   */
-/* ========================================= */
+/* ===================================== */
+/* FORMATO REAL TICKET 58MM */
+/* ===================================== */
 
+html, body {
+    width: 58mm !important;
+    max-width: 58mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+}
+
+/* Forzar tamaño real en PDF */
 @page {
-    size: 58mm auto;   /* 🔥 Altura automática */
+    size: 58mm auto;
     margin: 0;
 }
 
 /* ========================= */
-/* MODO IMPRESIÓN */
+/* CONTENEDOR PRINCIPAL */
 /* ========================= */
-@media print {
+.container {
+    width: 58mm !important;
+    max-width: 58mm !important;
+    margin: 0 !important;
+    padding: 2mm !important;
+    box-sizing: border-box;
+}
 
-    html, body {
-        width: 58mm;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
+/* ========================= */
+/* ESTILO GENERAL */
+/* ========================= */
+body {
+    font-family: monospace;
+    font-size: 9px;
+    line-height: 1.2;
+    color: #000;
+}
 
+/* ========================= */
+/* HEADER */
+/* ========================= */
+.header {
+    text-align: center;
+    margin-bottom: 2mm;
+}
+
+.header img {
+    max-width: 28mm;
+    display: block;
+    margin: 0 auto 2mm auto;
+}
+
+.header h1 {
+    font-size: 11px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.empresa-info {
+    font-size: 8px;
+}
+
+/* ========================= */
+/* SECCIONES INFO */
+/* ========================= */
+.pedido-info,
+.datos-cliente {
+    font-size: 8px;
+    margin-bottom: 2mm;
+}
+
+.pedido-info p,
+.datos-cliente p {
+    margin: 1px 0;
+}
+
+/* ========================= */
+/* TABLA */
+/* ========================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8px;
+}
+
+thead {
+    border-bottom: 1px dashed #000;
+}
+
+th {
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+
+td {
+    padding: 1px 0;
+    word-break: break-word;
+}
+
+td:nth-child(2),
+td:nth-child(4),
+td:nth-child(5) {
+    text-align: right;
+}
+
+tr {
+    page-break-inside: avoid;
+}
+
+/* ========================= */
+/* TOTAL */
+/* ========================= */
+.totales {
+    margin-top: 3mm;
+    text-align: right;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.totales strong {
+    font-size: 13px;
+}
+
+/* ========================= */
+/* MENSAJE FINAL */
+/* ========================= */
+.despedida {
+    text-align: center;
+    margin-top: 3mm;
+    font-size: 8px;
+}
+
+/* ========================= */
+/* MODO PANTALLA */
+/* ========================= */
+@media screen {
     body {
-        font-family: monospace;
-        font-size: 8.5px;
-        line-height: 1.15;
-        color: #000;
+        background: #f2f2f2;
+        display: flex;
+        justify-content: center;
     }
 
     .container {
-        width: 54mm;          /* ancho seguro */
-        padding: 2mm;
-        margin: 0;
+        background: #fff;
+        margin: 20px auto;
+        box-shadow: 0 0 6px rgba(0,0,0,0.2);
     }
-
-    /* ===== HEADER ===== */
-    .header {
-        text-align: center;
-        margin-bottom: 2mm;
-    }
-
-    .header img {
-        max-width: 28mm;
-        margin-bottom: 2mm;
-    }
-
-    .header h1 {
-        font-size: 10px;
-        margin: 0;
-        font-weight: bold;
-    }
-
-    .empresa-info {
-        font-size: 8px;
-        margin-top: 1mm;
-    }
-
-    hr {
-        border: none;
-        border-top: 1px dashed #000;
-        margin: 2mm 0;
-    }
-
-    /* ===== INFO CLIENTE ===== */
-    .pedido-info,
-    .datos-cliente {
-        font-size: 8px;
-        margin-bottom: 2mm;
-    }
-
-    .pedido-info p,
-    .datos-cliente p {
-        margin: 1px 0;
-    }
-
-    strong {
-        font-weight: bold;
-    }
-
-    /* ===== TABLA ===== */
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 8px;
-    }
-
-    thead {
-        border-bottom: 1px dashed #000;
-    }
-
-    th {
-        text-align: left;
-        padding-bottom: 2px;
-        font-weight: bold;
-    }
-
-    td {
-        padding: 1px 0;
-        word-break: break-word;
-    }
-
-    tr {
-        page-break-inside: avoid;
-    }
-
-    td:nth-child(2),
-    td:nth-child(4),
-    td:nth-child(5) {
-        text-align: right;
-    }
-
-    /* ===== TOTALES ===== */
-    .totales {
-        margin-top: 3mm;
-        font-size: 10px;
-        text-align: right;
-        font-weight: bold;
-    }
-
-    .totales strong {
-        font-size: 12px;
-    }
-
-    /* ===== DESPEDIDA ===== */
-    .despedida {
-        text-align: center;
-        margin-top: 3mm;
-        font-size: 8px;
-    }
-
-    /* Evitar saltos raros */
-    h1, h2, h3, p {
-        page-break-inside: avoid;
-    }
-}
-
-
-/* ========================= */
-/* VISTA EN PANTALLA */
-/* ========================= */
-
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    display: flex;
-    justify-content: center;
-}
-
-.container {
-    width: 58mm;
-    background: #fff;
-    padding: 3mm;
-    margin: 15px auto;
-    box-shadow: 0 0 6px rgba(0,0,0,0.2);
 }
