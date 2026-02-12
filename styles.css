@@ -1,20 +1,26 @@
-/* Styles for the document */
+/**
+ * Updated styles for a consistent font family and sizes.
+ */
 
 body {
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Arial', sans-serif;
-    font-size: 1.5em;
-    margin: 0;
+h1 {
+    font-size: 1.5em; /* 16.5px */
 }
 
-p {
-    font-size: 1em;
-    margin: 0 0 1em;
+h2 {
+    font-size: 1.3em; /* 14.3px */
 }
+
+h3 {
+    font-size: 1.2em; /* 13.2px */
+}
+
+h4 {
+    font-size: 1em; /* 11px */
+}
+
+/* Any other required styles would follow */
