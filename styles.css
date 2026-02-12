@@ -1,26 +1,28 @@
-/**
- * Updated styles for a consistent font family and sizes.
- */
+@page {
+    size: 58mm;
+    margin: 0;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    font-size: 11px;
+    width: 58mm;
+    margin: 0;
+    padding: 0;
+    font-size: 8px; /* Adjust for thermal printing */
 }
 
-h1 {
-    font-size: 1.5em; /* 16.5px */
+.container {
+    width: 58mm;
+    padding: 1mm;
+    margin: 0;
 }
 
-h2 {
-    font-size: 1.3em; /* 14.3px */
+/* Remove any unnecessary styles that could affect printing */
+* {
+    margin: 0;
+    padding: 2mm;
 }
 
-h3 {
-    font-size: 1.2em; /* 13.2px */
+/* Optimizing for page breaks */
+.page-break {
+    page-break-after: always;
 }
-
-h4 {
-    font-size: 1em; /* 11px */
-}
-
-/* Any other required styles would follow */
