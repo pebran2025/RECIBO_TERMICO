@@ -1,14 +1,15 @@
-/* ===================================== */
-/* CONFIGURACIÓN POS-58 */
-/* ===================================== */
+/* ========================================= */
+/* FORMATO IMPRESORA POS 58MM ROLLO REAL   */
+/* ========================================= */
+
 @page {
-    size: 58mm 210mm;
+    size: 58mm auto;   /* 🔥 Altura automática */
     margin: 0;
 }
 
-/* ===================================== */
-/* IMPRESIÓN */
-/* ===================================== */
+/* ========================= */
+/* MODO IMPRESIÓN */
+/* ========================= */
 @media print {
 
     html, body {
@@ -18,32 +19,31 @@
     }
 
     body {
-        display: block !important;
         font-family: monospace;
-        font-size: 9px;
-        line-height: 1.2;
+        font-size: 8.5px;
+        line-height: 1.15;
+        color: #000;
     }
 
     .container {
-        width: 54mm;        /* 🔥 ancho seguro sin corte */
+        width: 54mm;          /* ancho seguro */
         padding: 2mm;
         margin: 0;
     }
 
-    /* HEADER */
+    /* ===== HEADER ===== */
     .header {
         text-align: center;
         margin-bottom: 2mm;
     }
 
     .header img {
-        max-width: 30mm;
-        display: block;
-        margin: 0 auto 2mm auto;
+        max-width: 28mm;
+        margin-bottom: 2mm;
     }
 
     .header h1 {
-        font-size: 11px;
+        font-size: 10px;
         margin: 0;
         font-weight: bold;
     }
@@ -53,11 +53,17 @@
         margin-top: 1mm;
     }
 
-    /* INFO */
+    hr {
+        border: none;
+        border-top: 1px dashed #000;
+        margin: 2mm 0;
+    }
+
+    /* ===== INFO CLIENTE ===== */
     .pedido-info,
     .datos-cliente {
-        margin-top: 2mm;
         font-size: 8px;
+        margin-bottom: 2mm;
     }
 
     .pedido-info p,
@@ -65,18 +71,25 @@
         margin: 1px 0;
     }
 
-    /* TABLA */
+    strong {
+        font-weight: bold;
+    }
+
+    /* ===== TABLA ===== */
     table {
         width: 100%;
         border-collapse: collapse;
         font-size: 8px;
     }
 
+    thead {
+        border-bottom: 1px dashed #000;
+    }
+
     th {
         text-align: left;
-        font-weight: bold;
-        border-bottom: 1px solid black;
         padding-bottom: 2px;
+        font-weight: bold;
     }
 
     td {
@@ -94,41 +107,47 @@
         text-align: right;
     }
 
-    /* TOTAL */
+    /* ===== TOTALES ===== */
     .totales {
         margin-top: 3mm;
+        font-size: 10px;
         text-align: right;
-        font-size: 12px;
         font-weight: bold;
     }
 
     .totales strong {
-        font-size: 14px;
+        font-size: 12px;
     }
 
-    /* DESPEDIDA */
+    /* ===== DESPEDIDA ===== */
     .despedida {
         text-align: center;
         margin-top: 3mm;
         font-size: 8px;
     }
+
+    /* Evitar saltos raros */
+    h1, h2, h3, p {
+        page-break-inside: avoid;
+    }
 }
 
-/* ===================================== */
-/* PANTALLA */
-/* ===================================== */
+
+/* ========================= */
+/* VISTA EN PANTALLA */
+/* ========================= */
 
 body {
     font-family: Arial, sans-serif;
-    background: #f2f2f2;
+    background: #f4f4f4;
     display: flex;
     justify-content: center;
 }
 
 .container {
     width: 58mm;
-    background: white;
+    background: #fff;
     padding: 3mm;
-    margin: 10px auto;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    margin: 15px auto;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
 }
