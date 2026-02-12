@@ -1,8 +1,178 @@
-.container {
-  width: 58mm;
+@page {
+    size: 58mm 3276mm;
+    margin: 0.5cm;
 }
 
-@page {
-  size: 58mm 3276mm;
-  margin: 0;
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        background: none;
+    }
+
+    .container {
+        width: 100%;
+        min-height: auto;
+        padding: 5mm;
+        margin: 0;
+        page-break-after: avoid;
+    }
+
+    .header img {
+        max-width: 50mm;
+    }
+
+    .header {
+        margin-bottom: 5mm;
+    }
+
+    .pedido-info,
+    .datos-cliente,
+    .table-container {
+        margin-top: 5px;
+    }
+
+    .totales {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.totales strong {
+    font-size: 1.4em;
+    color: #1a4d2e;
+    letter-spacing: 1px;
+}
+
+.moneda {
+    color: #006400;
+    background: #e6ffe6;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-left: 6px;
+    font-size: 1.2em;
+}
+
+    .despedida {
+        margin-top: 10px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    width: 58mm;
+    padding: 2mm;
+    box-sizing: border-box;
+    background-color: white;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5mm;
+}
+
+.header img {
+    max-width: 50mm;
+    height: auto;
+}
+
+.header h1 {
+    margin: 1px;
+    font-size: 18px;
+    text-align: right;
+    border: 1px solid white;
+}
+
+.empresa-info {
+    text-align: right;
+    font-size: 9px;
+    margin-top: 5px;
+    border: 1px solid white;
+}
+
+.pedido-info {
+    margin-top: 5px;
+    text-align: left;
+    font-size: 9px;
+}
+
+.pedido-info p {
+    margin: 3px 0;
+}
+
+datos-cliente {
+    margin-top: 5px;
+    text-align: left;
+    font-size: 9px;
+}
+
+.table-container {
+    margin-top: 5px;
+    text-align: justify;
+    font-size: 8px;
+    page-break-inside: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    page-break-inside: auto;
+}
+
+th, td {
+    border: 0.5px solid black;
+    padding: 2px;
+    page-break-inside: avoid;
+}
+
+tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+}
+
+th {
+    background-color: #9e9999;
+    font-weight: bold;
+}
+
+.totales {
+    text-align: right;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.totales strong {
+    font-size: 12px;
+}
+
+#totalVenta, #nombreAsesor {
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    border: 1px solid white;
+}
+
+despedida {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 8px;
+}
+
+despedida strong {
+    display: block;
+    margin-bottom: 3px;
 }
