@@ -1,69 +1,64 @@
-/* ===================================== */
-/* FORMATO REAL TICKET 58MM */
-/* ===================================== */
+/* ========================================= */
+/* FORMATO REAL POS-58 (AREA IMPRIMIBLE 48MM) */
+/* ========================================= */
 
 html, body {
-    width: 58mm !important;
-    max-width: 58mm !important;
+    width: 48mm !important;
+    max-width: 48mm !important;
     margin: 0 !important;
     padding: 0 !important;
     overflow-x: hidden;
-}
-
-/* Forzar tamaño real en PDF */
-@page {
-    size: 58mm auto;
-    margin: 0;
-}
-
-/* ========================= */
-/* CONTENEDOR PRINCIPAL */
-/* ========================= */
-.container {
-    width: 58mm !important;
-    max-width: 58mm !important;
-    margin: 0 !important;
-    padding: 2mm !important;
-    box-sizing: border-box;
-}
-
-/* ========================= */
-/* ESTILO GENERAL */
-/* ========================= */
-body {
     font-family: monospace;
     font-size: 9px;
-    line-height: 1.2;
+    line-height: 1.15;
     color: #000;
 }
 
-/* ========================= */
+/* Forzar tamaño real incluso en PDF */
+@page {
+    size: 48mm auto;
+    margin: 0;
+}
+
+/* ========================================= */
+/* CONTENEDOR PRINCIPAL */
+/* ========================================= */
+
+.container {
+    width: 48mm !important;
+    max-width: 48mm !important;
+    margin: 0 !important;
+    padding: 1.5mm !important;
+    box-sizing: border-box;
+}
+
+/* ========================================= */
 /* HEADER */
-/* ========================= */
+/* ========================================= */
+
 .header {
     text-align: center;
     margin-bottom: 2mm;
 }
 
+/* Logo ancho completo del área imprimible */
 .header img {
-    max-width: 28mm;
+    width: 100%;
+    max-width: 100%;
     display: block;
     margin: 0 auto 2mm auto;
 }
 
-.header h1 {
-    font-size: 11px;
-    margin: 0;
-    font-weight: bold;
+/* Línea separadora */
+.separador {
+    border-top: 1px dashed #000;
+    margin: 2mm 0;
 }
 
-.empresa-info {
-    font-size: 8px;
-}
+/* ========================================= */
+/* INFORMACIÓN */
+/* ========================================= */
 
-/* ========================= */
-/* SECCIONES INFO */
-/* ========================= */
 .pedido-info,
 .datos-cliente {
     font-size: 8px;
@@ -75,9 +70,14 @@ body {
     margin: 1px 0;
 }
 
-/* ========================= */
+strong {
+    font-weight: bold;
+}
+
+/* ========================================= */
 /* TABLA */
-/* ========================= */
+/* ========================================= */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -90,8 +90,8 @@ thead {
 
 th {
     text-align: left;
-    font-weight: bold;
     padding-bottom: 2px;
+    font-weight: bold;
 }
 
 td {
@@ -109,32 +109,31 @@ tr {
     page-break-inside: avoid;
 }
 
-/* ========================= */
+/* ========================================= */
 /* TOTAL */
-/* ========================= */
+/* ========================================= */
+
 .totales {
     margin-top: 3mm;
-    text-align: right;
     font-size: 11px;
     font-weight: bold;
+    text-align: right;
 }
 
-.totales strong {
-    font-size: 13px;
-}
-
-/* ========================= */
+/* ========================================= */
 /* MENSAJE FINAL */
-/* ========================= */
+/* ========================================= */
+
 .despedida {
     text-align: center;
     margin-top: 3mm;
     font-size: 8px;
 }
 
-/* ========================= */
+/* ========================================= */
 /* MODO PANTALLA */
-/* ========================= */
+/* ========================================= */
+
 @media screen {
     body {
         background: #f2f2f2;
