@@ -1,117 +1,119 @@
 @page {
     size: 58mm auto;
     margin: 0;
-    padding: 0;
 }
 
+/* ============================= */
+/* IMPRESIÓN POS 58MM */
+/* ============================= */
 @media print {
+
+    html, body {
+        width: 48mm;
+        margin: 0;
+        padding: 0;
+        font-family: monospace;
+        font-size: 10px;
+    }
+
     * {
         margin: 0;
         padding: 0;
-    }
-
-    html, body {
-        margin: 0;
-        padding: 0;
-        background: none;
-        width: 58mm;
-    }
-
-    body {
-        display: block;
+        box-sizing: border-box;
+        color: black !important;
+        background: transparent !important;
     }
 
     .container {
-        width: 58mm;
+        width: 48mm;
         padding: 2mm;
-        margin: 0;
-        box-sizing: border-box;
-        page-break-after: avoid;
     }
 
+    /* HEADER */
     .header {
+        text-align: center;
         margin-bottom: 2mm;
-        page-break-inside: avoid;
     }
 
     .header img {
-        max-width: 45mm;
+        max-width: 35mm;
         height: auto;
+        display: block;
+        margin: 0 auto 2mm auto;
     }
 
     .header h1 {
-        margin: 0;
-        font-size: 14px;
-        border: none;
+        font-size: 12px;
+        font-weight: bold;
     }
 
     .empresa-info {
-        margin: 0;
-        font-size: 7px;
-        border: none;
+        font-size: 9px;
+        text-align: center;
     }
 
+    /* INFO PEDIDO Y CLIENTE */
     .pedido-info,
     .datos-cliente {
-        margin-top: 1mm;
-        page-break-inside: avoid;
+        font-size: 9px;
+        margin-top: 2mm;
     }
 
     .pedido-info p,
     .datos-cliente p {
         margin: 1px 0;
-        font-size: 7px;
     }
 
+    /* TABLA */
     .table-container {
         margin-top: 2mm;
-        page-break-inside: avoid;
     }
 
     table {
         width: 100%;
         border-collapse: collapse;
-        font-size: 6.5px;
+        font-size: 9px;
     }
 
     th, td {
-        border: 0.5px solid black;
-        padding: 1.5px;
-        page-break-inside: avoid;
+        padding: 2px 0;
+        border-bottom: 1px dashed black;
+        text-align: left;
+        word-wrap: break-word;
     }
 
     th {
-        background-color: #9e9999;
         font-weight: bold;
-        font-size: 6.5px;
+        border-bottom: 1px solid black;
     }
 
-    .totales {
-        margin-top: 2mm;
-        text-align: right;
+    tr {
         page-break-inside: avoid;
+    }
+
+    /* TOTALES */
+    .totales {
+        margin-top: 3mm;
+        text-align: right;
+        font-size: 11px;
+        font-weight: bold;
     }
 
     .totales strong {
-        font-size: 11px;
-        color: #1a4d2e;
-        letter-spacing: 0.5px;
+        font-size: 12px;
     }
 
+    /* ELIMINAMOS COLORES TERMICA */
     .moneda {
-        color: #006400;
-        background: #e6ffe6;
-        padding: 1px 5px;
-        border-radius: 3px;
         font-weight: bold;
-        margin-left: 2px;
-        font-size: 10px;
+        padding: 0;
     }
 
+    /* DESPEDIDA */
     .despedida {
-        margin-top: 2mm;
-        font-size: 7px;
-        page-break-inside: avoid;
+        margin-top: 3mm;
+        font-size: 9px;
+        text-align: center;
     }
 
     .despedida strong {
@@ -120,128 +122,68 @@
     }
 }
 
-/* Estilos normales para pantalla */
+
+/* ============================= */
+/* ESTILOS PARA PANTALLA */
+/* ============================= */
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: white;
+    background: #f5f5f5;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
 }
 
 .container {
     width: 58mm;
-    padding: 2mm;
-    box-sizing: border-box;
-    background-color: white;
-    margin: 0 auto;
+    background: white;
+    padding: 3mm;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    text-align: center;
     margin-bottom: 2mm;
-    gap: 3mm;
 }
 
 .header img {
-    max-width: 45mm;
-    height: auto;
-    flex-shrink: 0;
-}
-
-.header-text {
-    flex: 1;
-    text-align: right;
+    max-width: 40mm;
 }
 
 .header h1 {
-    margin: 0;
     font-size: 14px;
-    border: none;
 }
 
 .empresa-info {
-    text-align: right;
-    font-size: 7px;
-    margin-top: 1px;
-    border: none;
+    font-size: 10px;
 }
 
-.pedido-info {
-    margin-top: 2mm;
-    text-align: left;
-    font-size: 7px;
-}
-
-.pedido-info p {
-    margin: 1px 0;
-}
-
+.pedido-info,
 .datos-cliente {
-    margin-top: 1mm;
-    text-align: left;
-    font-size: 7px;
-}
-
-.datos-cliente p {
-    margin: 1px 0;
-}
-
-.table-container {
+    font-size: 10px;
     margin-top: 2mm;
-    text-align: left;
-    font-size: 6.5px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    font-size: 10px;
 }
 
 th, td {
-    border: 0.5px solid black;
-    padding: 1.5px;
-}
-
-tr {
-    page-break-inside: avoid;
-}
-
-th {
-    background-color: #9e9999;
-    font-weight: bold;
-    font-size: 6.5px;
-}
-
-#totalVenta, #nombreAsesor {
-    font-size: 11px;
-    font-weight: bold;
-    color: black;
-    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 3px 0;
 }
 
 .totales {
     text-align: right;
-    font-size: 11px;
-    margin-top: 2mm;
-}
-
-.totales strong {
-    font-size: 11px;
+    font-size: 12px;
+    margin-top: 3mm;
+    font-weight: bold;
 }
 
 .despedida {
-    text-align: left;
-    margin-top: 2mm;
-    font-size: 7px;
-}
-
-.despedida strong {
-    display: block;
-    margin-bottom: 2px;
+    text-align: center;
+    margin-top: 3mm;
+    font-size: 10px;
 }
