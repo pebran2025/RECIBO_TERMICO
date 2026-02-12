@@ -19,7 +19,7 @@
     }
 
     .header img {
-        max-width: 160mm;
+        max-width: 80mm;
     }
 
     .header {
@@ -70,7 +70,7 @@ body {
 }
 
 .container {
-    width: 212.9mm;
+    width: 80mm;
     padding: 10mm;
     box-sizing: border-box;
     background-color: white;
@@ -86,7 +86,7 @@ body {
 }
 
 .header img {
-    max-width: 187mm;
+    max-width: 80mm;
     height: auto;
 }
 
